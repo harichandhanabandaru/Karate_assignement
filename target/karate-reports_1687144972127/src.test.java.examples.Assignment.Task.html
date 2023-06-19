@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="res/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="res/karate-report.css" type="text/css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script type="text/javascript" src="res/jquery.min.js"></script>
+    <script type="text/javascript" src="res/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="res/bootstrap.min.js"></script>
+    <script type="text/javascript" src="res/karate-report.js"></script>
+    <script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
+  api_host:'https://app.posthog.com',
+  persistence:'localStorage',
+  autocapture:false,
+  capture_pageview:false,
+  api_transport:'sendBeacon',
+  loaded: function(posthog) { 
+    posthog.identify("5b4f0969-ecb0-4863-b6c3-04f3033633ff",{name:"haricb"});
+    posthog.capture("report_feature",{karate_version:"1.2.0",karate_meta:"intellij:1.7.4.325"});
+  }
+});
+</script>
+  
+    <title>src.test.java.examples.Assignment.Task</title>  
+  </head>
+  <body>   
+    <div id="root-container">
+      <div id="leftnav">
+                
+        <div>
+  <div class="nav-logo">
+    <a href="https://karatelabs.io">
+      <img src="karate-labs-logo-ring.svg" alt="Karate Labs"/>
+    </a>
+    <div class="nav-count">
+      <div id="nav-pass" class="bg-success">1</div>
+      <div id="nav-fail" class="bg-danger">0</div>
+    </div>
+  </div>
+  <div id="nav-type">
+    <div>Scenarios</div>
+  </div>         
+  <div id="nav-date">
+    <div>2023-06-19 08:50:37 AM</div>
+  </div>        
+</div>
+
+        <div class="nav-container">
+          <div class="nav-item passed">
+            <a href="#[1:10]"><span>[1:10]</span> <span>Get all tasks</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div class="page-heading alert alert-primary">
+          <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
+          <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
+          <span class="feature-label">Feature:</span>
+          <span class="feature-path">src/test/java/examples/Assignment/Task.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">Todoist API Testing assignment</span>
+          <span class="feature-description"></span>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1:10]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1:10]</span>
+                <span class="scenario-name">Get all tasks</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>1923</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1:10]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1:10]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url &#39;https://api.todoist.com/rest/v2&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.4">08:50:35.679 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:10]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Authorization = &#39;Bearer eda5ea58ba9befd9d42298a9fb8c405e3c2d7d8d&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:10]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.6">
+      <div class="step-ref bg-step">6</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def uuid = java.util.UUID.randomUUID().toString()</span>
+      </div>
+    </div>
+    <div class="time-cell passed">16</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.11">
+      <div class="step-ref passed">11</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;tasks&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.12">
+      <div class="step-ref passed">12</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1904</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.12">08:50:36.047 request:
+1 &gt; GET https://api.todoist.com/rest/v2/tasks
+1 &gt; Authorization: Bearer eda5ea58ba9befd9d42298a9fb8c405e3c2d7d8d
+1 &gt; Host: api.todoist.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.19)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+08:50:37.586 response time in milliseconds: 1512
+1 &lt; 200
+1 &lt; Content-Type: application/json
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Connection: keep-alive
+1 &lt; Date: Mon, 19 Jun 2023 03:20:36 GMT
+1 &lt; Access-Control-Allow-Credentials: false
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Referrer-Policy: strict-origin-when-cross-origin
+1 &lt; Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+1 &lt; Vary: Accept-Encoding
+1 &lt; X-Cache: Miss from cloudfront
+1 &lt; Via: 1.1 547cde31b4190e0bed1b8ac7a943f83e.cloudfront.net (CloudFront)
+1 &lt; X-Amz-Cf-Pop: MAA51-P1
+1 &lt; X-Amz-Cf-Id: Qgxydi2EW1TCy-WuwnNHULrH3KpxKvEibTfc7emEOngE70Mnpyhv6A==
+1 &lt; Set-Cookie: csrf=c54c9dd2c7be4e0a97c9c9440c4d099a; Max-Age=2002504836000; Expires=Sun, 25 Apr 65480 10:40:37 GMT; Domain=api.todoist.com; Secure
+[
+	{
+		&quot;id&quot;: &quot;6971355157&quot;,
+		&quot;assigner_id&quot;: null,
+		&quot;assignee_id&quot;: null,
+		&quot;project_id&quot;: &quot;2314680684&quot;,
+		&quot;section_id&quot;: null,
+		&quot;parent_id&quot;: null,
+		&quot;order&quot;: 1,
+		&quot;content&quot;: &quot;Add all my **work** tasks&quot;,
+		&quot;description&quot;: &quot;&quot;,
+		&quot;is_completed&quot;: false,
+		&quot;labels&quot;: [],
+		&quot;priority&quot;: 3,
+		&quot;comment_count&quot;: 0,
+		&quot;creator_id&quot;: &quot;44619013&quot;,
+		&quot;created_at&quot;: &quot;2023-06-16T11:55:02.939710Z&quot;,
+		&quot;due&quot;: {
+			&quot;date&quot;: &quot;2023-06-16&quot;,
+			&quot;string&quot;: &quot;16 Jun&quot;,
+			&quot;lang&quot;: &quot;en&quot;,
+			&quot;is_recurring&quot;: false
+		},
+		&quot;url&quot;: &quot;https://todoist.com/showTask?id=6971355157&quot;,
+		&quot;duration&quot;: null
+	},
+	{
+		&quot;id&quot;: &quot;6971355164&quot;,
+		&quot;assigner_id&quot;: null,
+		&quot;assignee_id&quot;: null,
+		&quot;project_id&quot;: &quot;2314680684&quot;,
+		&quot;section_id&quot;: null,
+		&quot;parent_id&quot;: null,
+		&quot;order&quot;: 2,
+		&quot;content&quot;: &quot;Connect my work calendar to Todoist&quot;,
+		&quot;description&quot;: &quot;[Calendar Integrations | Todoist](https://todoist.com/integrations?category=calendars&amp;utm_source=todoist&amp;utm_medium=in_app&amp;utm_campaign=onboarding_project&amp;utm_content=work)&quot;,
+		&quot;is_completed&quot;: false,
+		&quot;labels&quot;: [],
+		&quot;priority&quot;: 1,
+		&quot;comment_count&quot;: 0,
+		&quot;creator_id&quot;: &quot;44619013&quot;,
+		&quot;created_at&quot;: &quot;2023-06-16T11:55:03.178113Z&quot;,
+		&quot;due&quot;: null,
+		&quot;url&quot;: &quot;https://todoist.com/showTask?id=6971355164&quot;,
+		&quot;duration&quot;: null
+	},
+	{
+		&quot;id&quot;: &quot;6971355172&quot;,
+		&quot;assigner_id&quot;: null,
+		&quot;assignee_id&quot;: null,
+		&quot;project_id&quot;: &quot;2314680684&quot;,
+		&quot;section_id&quot;: &quot;126324493&quot;,
+		&quot;parent_id&quot;: null,
+		&quot;order&quot;: 1,
+		&quot;content&quot;: &quot;Review my day and plan ahead&quot;,
+		&quot;description&quot;: &quot;&quot;,
+		&quot;is_completed&quot;: false,
+		&quot;labels&quot;: [],
+		&quot;priority&quot;: 2,
+		&quot;comment_count&quot;: 0,
+		&quot;creator_id&quot;: &quot;44619013&quot;,
+		&quot;created_at&quot;: &quot;2023-06-16T11:55:03.443101Z&quot;,
+		&quot;due&quot;: {
+			&quot;date&quot;: &quot;2023-06-19&quot;,
+			&quot;timezone&quot;: &quot;Asia/Kolkata&quot;,
+			&quot;string&quot;: &quot;ev workday at 5pm&quot;,
+			&quot;lang&quot;: &quot;en&quot;,
+			&quot;is_recurring&quot;: true,
+			&quot;datetime&quot;: &quot;2023-06-19T11:30:00Z&quot;
+		},
+		&quot;url&quot;: &quot;https://todoist.com/showTask?id=6971355172&quot;,
+		&quot;duration&quot;: null
+	},
+	{
+		&quot;id&quot;: &quot;6971355176&quot;,
+		&quot;assigner_id&quot;: null,
+		&quot;assignee_id&quot;: null,
+		&quot;project_id&quot;: &quot;2314680684&quot;,
+		&quot;section_id&quot;: &quot;126324493&quot;,
+		&quot;parent_id&quot;: null,
+		&quot;order&quot;: 2,
+		&quot;content&quot;: &quot;Check my work emails&quot;,
+		&quot;description&quot;: &quot;&quot;,
+		&quot;is_completed&quot;: false,
+		&quot;labels&quot;: [],
+		&quot;priority&quot;: 2,
+		&quot;comment_count&quot;: 0,
+		&quot;creator_id&quot;: &quot;44619013&quot;,
+		&quot;created_at&quot;: &quot;2023-06-16T11:55:03.833880Z&quot;,
+		&quot;due&quot;: {
+			&quot;date&quot;: &quot;2023-06-19&quot;,
+			&quot;timezone&quot;: &quot;Asia/Kolkata&quot;,
+			&quot;string&quot;: &quot;every workday at 10am&quot;,
+			&quot;lang&quot;: &quot;en&quot;,
+			&quot;is_recurring&quot;: true,
+			&quot;datetime&quot;: &quot;2023-06-19T04:30:00Z&quot;
+		},
+		&quot;url&quot;: &quot;https://todoist.com/showTask?id=6971355176&quot;,
+		&quot;duration&quot;: null
+	},
+	{
+		&quot;id&quot;: &quot;6971355189&quot;,
+		&quot;assigner_id&quot;: null,
+		&quot;assignee_id&quot;: null,
+		&quot;project_id&quot;: &quot;2314680684&quot;,
+		&quot;section_id&quot;: &quot;126324493&quot;,
+		&quot;parent_id&quot;: null,
+		&quot;order&quot;: 3,
+		&quot;content&quot;: &quot;Adapt my _work_ routines&quot;,
+		&quot;description&quot;: &quot;e.g.: perform daily shutdown routine, prepare weekly team meeting every Tuesday&quot;,
+		&quot;is_completed&quot;: false,
+		&quot;labels&quot;: [],
+		&quot;priority&quot;: 1,
+		&quot;comment_count&quot;: 0,
+		&quot;creator_id&quot;: &quot;44619013&quot;,
+		&quot;created_at&quot;: &quot;2023-06-16T11:55:04.020474Z&quot;,
+		&quot;due&quot;: null,
+		&quot;url&quot;: &quot;https://todoist.com/showTask?id=6971355189&quot;,
+		&quot;duration&quot;: null
+	},
+	{
+		&quot;id&quot;: &quot;6971355198&quot;,
+		&quot;assigner_id&quot;: null,
+		&quot;assignee_id&quot;: null,
+		&quot;project_id&quot;: &quot;2314680684&quot;,
+		&quot;section_id&quot;: &quot;126324494&quot;,
+		&quot;parent_id&quot;: null,
+		&quot;order&quot;: 1,
+		&quot;content&quot;: &quot;[Perform a workday shutdown routine](https://blog.doist.com/end-work-day/?utm_source=todoist&amp;utm_medium=in_app&amp;utm_campaign=onboarding_project&amp;utm_content=work) 🌖&quot;,
+		&quot;description&quot;: &quot;&quot;,
+		&quot;is_completed&quot;: false,
+		&quot;labels&quot;: [
+			&quot;read&quot;
+		],
+		&quot;priority&quot;: 1,
+		&quot;comment_count&quot;: 0,
+		&quot;creator_id&quot;: &quot;44619013&quot;,
+		&quot;created_at&quot;: &quot;2023-06-16T11:55:04.180131Z&quot;,
+		&quot;due&quot;: null,
+		&quot;url&quot;: &quot;https://todoist.com/showTask?id=6971355198&quot;,
+		&quot;duration&quot;: null
+	},
+	{
+		&quot;id&quot;: &quot;6971355209&quot;,
+		&quot;assigner_id&quot;: null,
+		&quot;assignee_id&quot;: null,
+		&quot;project_id&quot;: &quot;2314680684&quot;,
+		&quot;section_id&quot;: &quot;126324494&quot;,
+		&quot;parent_id&quot;: null,
+		&quot;order&quot;: 2,
+		&quot;content&quot;: &quot;[Todoist Integrations That Will Boost Your Productivity](https://blog.doist.com/todoist-integrations-productivity/?utm_source=todoist&amp;utm_medium=in_app&amp;utm_campaign=onboarding_project&amp;utm_content=work)&quot;,
+		&quot;description&quot;: &quot;&quot;,
+		&quot;is_completed&quot;: false,
+		&quot;labels&quot;: [
+			&quot;read&quot;
+		],
+		&quot;priority&quot;: 1,
+		&quot;comment_count&quot;: 0,
+		&quot;creator_id&quot;: &quot;44619013&quot;,
+		&quot;created_at&quot;: &quot;2023-06-16T11:55:04.291595Z&quot;,
+		&quot;due&quot;: null,
+		&quot;url&quot;: &quot;https://todoist.com/showTask?id=6971355209&quot;,
+		&quot;duration&quot;: null
+	},
+	{
+		&quot;id&quot;: &quot;6971355214&quot;,
+		&quot;assigner_id&quot;: null,
+		&quot;assignee_id&quot;: null,
+		&quot;project_id&quot;: &quot;2314680684&quot;,
+		&quot;section_id&quot;: &quot;126324494&quot;,
+		&quot;parent_id&quot;: null,
+		&quot;order&quot;: 3,
+		&quot;content&quot;: &quot;Explore Todoist&#39;s curated [work templates](https://todoist.com/templates/category/work?utm_source=todoist&amp;utm_medium=in_app&amp;utm_campaign=onboarding_project&amp;utm_content=work)&quot;,
+		&quot;description&quot;: &quot;&quot;,
+		&quot;is_completed&quot;: false,
+		&quot;labels&quot;: [],
+		&quot;priority&quot;: 1,
+		&quot;comment_count&quot;: 0,
+		&quot;creator_id&quot;: &quot;44619013&quot;,
+		&quot;created_at&quot;: &quot;2023-06-16T11:55:04.400533Z&quot;,
+		&quot;due&quot;: null,
+		&quot;url&quot;: &quot;https://todoist.com/showTask?id=6971355214&quot;,
+		&quot;duration&quot;: null
+	},
+	{
+		&quot;id&quot;: &quot;6971355273&quot;,
+		&quot;assigner_id&quot;: null,
+		&quot;assignee_id&quot;: null,
+		&quot;project_id&quot;: &quot;2314680664&quot;,
+		&quot;section_id&quot;: null,
+		&quot;parent_id&quot;: null,
+		&quot;order&quot;: 1,
+		&quot;content&quot;: &quot;Learn the basics with the easy-to-follow [Getting Started Guide](https://todoist.com/getting-started?utm_source=todoist&amp;utm_medium=in_app&amp;utm_campaign=onboarding_project&amp;utm_content=inbox) 🔗&quot;,
+		&quot;description&quot;: &quot;&quot;,
+		&quot;is_completed&quot;: false,
+		&quot;labels&quot;: [],
+		&quot;priority&quot;: 4,
+		&quot;comment_count&quot;: 0,
+		&quot;creator_id&quot;: &quot;44619013&quot;,
+		&quot;created_at&quot;: &quot;2023-06-16T11:55:05.778337Z&quot;,
+		&quot;due&quot;: {
+			&quot;date&quot;: &quot;2023-06-16&quot;,
+			&quot;string&quot;: &quot;16 Jun&quot;,
+			&quot;lang&quot;: &quot;en&quot;,
+			&quot;is_recurring&quot;: false
+		},
+		&quot;url&quot;: &quot;https://todoist.com/showTask?id=6971355273&quot;,
+		&quot;duration&quot;: null
+	},
+	{
+		&quot;id&quot;: &quot;6971355276&quot;,
+		&quot;assigner_id&quot;: null,
+		&quot;assignee_id&quot;: null,
+		&quot;project_id&quot;: &quot;2314680664&quot;,
+		&quot;section_id&quot;: null,
+		&quot;parent_id&quot;: null,
+		&quot;order&quot;: 2,
+		&quot;content&quot;: &quot;Take the [productivity method quiz](https://todoist.com/productivity-methods?utm_source=todoist&amp;utm_medium=in_app&amp;utm_campaign=onboarding_project&amp;utm_content=inbox)&quot;,
+		&quot;description&quot;: &quot;Get a personalized recommendation from Todoist&quot;,
+		&quot;is_completed&quot;: false,
+		&quot;labels&quot;: [],
+		&quot;priority&quot;: 3,
+		&quot;comment_count&quot;: 0,
+		&quot;creator_id&quot;: &quot;44619013&quot;,
+		&quot;created_at&quot;: &quot;2023-06-16T11:55:05.907134Z&quot;,
+		&quot;due&quot;: {
+			&quot;date&quot;: &quot;2023-06-17&quot;,
+			&quot;string&quot;: &quot;17 Jun&quot;,
+			&quot;lang&quot;: &quot;en&quot;,
+			&quot;is_recurring&quot;: false
+		},
+		&quot;url&quot;: &quot;https://todoist.com/showTask?id=6971355276&quot;,
+		&quot;duration&quot;: null
+	},
+	{
+		&quot;id&quot;: &quot;6971355281&quot;,
+		&quot;assigner_id&quot;: null,
+		&quot;assignee_id&quot;: null,
+		&quot;project_id&quot;: &quot;2314680664&quot;,
+		&quot;section_id&quot;: null,
+		&quot;parent_id&quot;: null,
+		&quot;order&quot;: 3,
+		&quot;content&quot;: &quot;Download additional [free apps and plugins](https://todoist.com/help/articles/205383721?utm_source=todoist&amp;utm_medium=in_app&amp;utm_campaign=onboarding_project&amp;utm_content=inbox) for 💻,⌚️,🖥,📱 and 📧&quot;,
+		&quot;description&quot;: &quot;&quot;,
+		&quot;is_completed&quot;: false,
+		&quot;labels&quot;: [],
+		&quot;priority&quot;: 1,
+		&quot;comment_count&quot;: 0,
+		&quot;creator_id&quot;: &quot;44619013&quot;,
+		&quot;created_at&quot;: &quot;2023-06-16T11:55:05.997389Z&quot;,
+		&quot;due&quot;: {
+			&quot;date&quot;: &quot;2023-06-19&quot;,
+			&quot;string&quot;: &quot;19 Jun&quot;,
+			&quot;lang&quot;: &quot;en&quot;,
+			&quot;is_recurring&quot;: false
+		},
+		&quot;url&quot;: &quot;https://todoist.com/showTask?id=6971355281&quot;,
+		&quot;duration&quot;: null
+	},
+	{
+		&quot;id&quot;: &quot;6971355282&quot;,
+		&quot;assigner_id&quot;: null,
+		&quot;assignee_id&quot;: null,
+		&quot;project_id&quot;: &quot;2314680664&quot;,
+		&quot;section_id&quot;: null,
+		&quot;parent_id&quot;: null,
+		&quot;order&quot;: 4,
+		&quot;content&quot;: &quot;[Connect Todoist](https://todoist.com/integrations?utm_source=todoist&amp;utm_medium=in_app&amp;utm_campaign=onboarding_project&amp;utm_content=inbox) with all the tools I already use&quot;,
+		&quot;description&quot;: &quot;&quot;,
+		&quot;is_completed&quot;: false,
+		&quot;labels&quot;: [],
+		&quot;priority&quot;: 1,
+		&quot;comment_count&quot;: 1,
+		&quot;creator_id&quot;: &quot;44619013&quot;,
+		&quot;created_at&quot;: &quot;2023-06-16T11:55:06.095558Z&quot;,
+		&quot;due&quot;: null,
+		&quot;url&quot;: &quot;https://todoist.com/showTask?id=6971355282&quot;,
+		&quot;duration&quot;: null
+	},
+	{
+		&quot;id&quot;: &quot;6971355285&quot;,
+		&quot;assigner_id&quot;: null,
+		&quot;assignee_id&quot;: null,
+		&quot;project_id&quot;: &quot;2314680664&quot;,
+		&quot;section_id&quot;: null,
+		&quot;parent_id&quot;: null,
+		&quot;order&quot;: 5,
+		&quot;content&quot;: &quot;How Todoist&#39;s founder achieves his goals while reducing his stress 😌&quot;,
+		&quot;description&quot;: &quot;[Systemist: Todoist&#39;s Founder&#39;s Personal Productivity Workflow](https://todoist.com/productivity-methods/systemist?utm_source=todoist&amp;utm_medium=in_app&amp;utm_campaign=onboarding_project&amp;utm_content=inbox)&quot;,
+		&quot;is_completed&quot;: false,
+		&quot;labels&quot;: [
+			&quot;read&quot;
+		],
+		&quot;priority&quot;: 1,
+		&quot;comment_count&quot;: 0,
+		&quot;creator_id&quot;: &quot;44619013&quot;,
+		&quot;created_at&quot;: &quot;2023-06-16T11:55:06.258427Z&quot;,
+		&quot;due&quot;: null,
+		&quot;url&quot;: &quot;https://todoist.com/showTask?id=6971355285&quot;,
+		&quot;duration&quot;: null
+	},
+	{
+		&quot;id&quot;: &quot;6975869695&quot;,
+		&quot;assigner_id&quot;: null,
+		&quot;assignee_id&quot;: null,
+		&quot;project_id&quot;: &quot;2314681572&quot;,
+		&quot;section_id&quot;: null,
+		&quot;parent_id&quot;: null,
+		&quot;order&quot;: 1,
+		&quot;content&quot;: &quot;Buy Milk&quot;,
+		&quot;description&quot;: &quot;&quot;,
+		&quot;is_completed&quot;: false,
+		&quot;labels&quot;: [],
+		&quot;priority&quot;: 1,
+		&quot;comment_count&quot;: 0,
+		&quot;creator_id&quot;: &quot;44619013&quot;,
+		&quot;created_at&quot;: &quot;2023-06-18T15:33:04.396305Z&quot;,
+		&quot;due&quot;: null,
+		&quot;url&quot;: &quot;https://todoist.com/showTask?id=6975869695&quot;,
+		&quot;duration&quot;: null
+	},
+	{
+		&quot;id&quot;: &quot;6975874516&quot;,
+		&quot;assigner_id&quot;: null,
+		&quot;assignee_id&quot;: null,
+		&quot;project_id&quot;: &quot;2314681572&quot;,
+		&quot;section_id&quot;: null,
+		&quot;parent_id&quot;: null,
+		&quot;order&quot;: 3,
+		&quot;content&quot;: &quot;Buy Milk&quot;,
+		&quot;description&quot;: &quot;&quot;,
+		&quot;is_completed&quot;: false,
+		&quot;labels&quot;: [],
+		&quot;priority&quot;: 1,
+		&quot;comment_count&quot;: 0,
+		&quot;creator_id&quot;: &quot;44619013&quot;,
+		&quot;created_at&quot;: &quot;2023-06-18T15:36:06.315523Z&quot;,
+		&quot;due&quot;: null,
+		&quot;url&quot;: &quot;https://todoist.com/showTask?id=6975874516&quot;,
+		&quot;duration&quot;: null
+	},
+	{
+		&quot;id&quot;: &quot;6975877262&quot;,
+		&quot;assigner_id&quot;: null,
+		&quot;assignee_id&quot;: null,
+		&quot;project_id&quot;: &quot;2314681572&quot;,
+		&quot;section_id&quot;: null,
+		&quot;parent_id&quot;: null,
+		&quot;order&quot;: 4,
+		&quot;content&quot;: &quot;Buy Milk&quot;,
+		&quot;description&quot;: &quot;&quot;,
+		&quot;is_completed&quot;: false,
+		&quot;labels&quot;: [],
+		&quot;priority&quot;: 1,
+		&quot;comment_count&quot;: 0,
+		&quot;creator_id&quot;: &quot;44619013&quot;,
+		&quot;created_at&quot;: &quot;2023-06-18T15:37:40.715481Z&quot;,
+		&quot;due&quot;: null,
+		&quot;url&quot;: &quot;https://todoist.com/showTask?id=6975877262&quot;,
+		&quot;duration&quot;: null
+	},
+	{
+		&quot;id&quot;: &quot;6975880674&quot;,
+		&quot;assigner_id&quot;: null,
+		&quot;assignee_id&quot;: null,
+		&quot;project_id&quot;: &quot;2314681572&quot;,
+		&quot;section_id&quot;: null,
+		&quot;parent_id&quot;: null,
+		&quot;order&quot;: 5,
+		&quot;content&quot;: &quot;Buy Milk&quot;,
+		&quot;description&quot;: &quot;&quot;,
+		&quot;is_completed&quot;: false,
+		&quot;labels&quot;: [],
+		&quot;priority&quot;: 1,
+		&quot;comment_count&quot;: 0,
+		&quot;creator_id&quot;: &quot;44619013&quot;,
+		&quot;created_at&quot;: &quot;2023-06-18T15:39:46.607992Z&quot;,
+		&quot;due&quot;: null,
+		&quot;url&quot;: &quot;https://todoist.com/showTask?id=6975880674&quot;,
+		&quot;duration&quot;: null
+	},
+	{
+		&quot;id&quot;: &quot;6975882698&quot;,
+		&quot;assigner_id&quot;: null,
+		&quot;assignee_id&quot;: null,
+		&quot;project_id&quot;: &quot;2314681572&quot;,
+		&quot;section_id&quot;: null,
+		&quot;parent_id&quot;: null,
+		&quot;order&quot;: 6,
+		&quot;content&quot;: &quot;Buy Milk&quot;,
+		&quot;description&quot;: &quot;&quot;,
+		&quot;is_completed&quot;: false,
+		&quot;labels&quot;: [],
+		&quot;priority&quot;: 1,
+		&quot;comment_count&quot;: 0,
+		&quot;creator_id&quot;: &quot;44619013&quot;,
+		&quot;created_at&quot;: &quot;2023-06-18T15:40:45.805066Z&quot;,
+		&quot;due&quot;: null,
+		&quot;url&quot;: &quot;https://todoist.com/showTask?id=6975882698&quot;,
+		&quot;duration&quot;: null
+	},
+	{
+		&quot;id&quot;: &quot;6975885638&quot;,
+		&quot;assigner_id&quot;: null,
+		&quot;assignee_id&quot;: null,
+		&quot;project_id&quot;: &quot;2314681572&quot;,
+		&quot;section_id&quot;: null,
+		&quot;parent_id&quot;: null,
+		&quot;order&quot;: 7,
+		&quot;content&quot;: &quot;Buy Milk&quot;,
+		&quot;description&quot;: &quot;&quot;,
+		&quot;is_completed&quot;: false,
+		&quot;labels&quot;: [],
+		&quot;priority&quot;: 1,
+		&quot;comment_count&quot;: 0,
+		&quot;creator_id&quot;: &quot;44619013&quot;,
+		&quot;created_at&quot;: &quot;2023-06-18T15:42:12.746595Z&quot;,
+		&quot;due&quot;: null,
+		&quot;url&quot;: &quot;https://todoist.com/showTask?id=6975885638&quot;,
+		&quot;duration&quot;: null
+	},
+	{
+		&quot;id&quot;: &quot;6975889165&quot;,
+		&quot;assigner_id&quot;: null,
+		&quot;assignee_id&quot;: null,
+		&quot;project_id&quot;: &quot;2314681572&quot;,
+		&quot;section_id&quot;: null,
+		&quot;parent_id&quot;: null,
+		&quot;order&quot;: 8,
+		&quot;content&quot;: &quot;Buy Milk&quot;,
+		&quot;description&quot;: &quot;&quot;,
+		&quot;is_completed&quot;: false,
+		&quot;labels&quot;: [],
+		&quot;priority&quot;: 1,
+		&quot;comment_count&quot;: 0,
+		&quot;creator_id&quot;: &quot;44619013&quot;,
+		&quot;created_at&quot;: &quot;2023-06-18T15:44:11.096137Z&quot;,
+		&quot;due&quot;: null,
+		&quot;url&quot;: &quot;https://todoist.com/showTask?id=6975889165&quot;,
+		&quot;duration&quot;: null
+	},
+	{
+		&quot;id&quot;: &quot;6975889651&quot;,
+		&quot;assigner_id&quot;: null,
+		&quot;assignee_id&quot;: null,
+		&quot;project_id&quot;: &quot;2314681572&quot;,
+		&quot;section_id&quot;: null,
+		&quot;parent_id&quot;: null,
+		&quot;order&quot;: 9,
+		&quot;content&quot;: &quot;Buy Milk&quot;,
+		&quot;description&quot;: &quot;&quot;,
+		&quot;is_completed&quot;: false,
+		&quot;labels&quot;: [],
+		&quot;priority&quot;: 1,
+		&quot;comment_count&quot;: 0,
+		&quot;creator_id&quot;: &quot;44619013&quot;,
+		&quot;created_at&quot;: &quot;2023-06-18T15:44:24.842815Z&quot;,
+		&quot;due&quot;: null,
+		&quot;url&quot;: &quot;https://todoist.com/showTask?id=6975889651&quot;,
+		&quot;duration&quot;: null
+	},
+	{
+		&quot;id&quot;: &quot;6975914862&quot;,
+		&quot;assigner_id&quot;: null,
+		&quot;assignee_id&quot;: null,
+		&quot;project_id&quot;: &quot;2314681572&quot;,
+		&quot;section_id&quot;: null,
+		&quot;parent_id&quot;: null,
+		&quot;order&quot;: 10,
+		&quot;content&quot;: &quot;Buy Milk&quot;,
+		&quot;description&quot;: &quot;&quot;,
+		&quot;is_completed&quot;: false,
+		&quot;labels&quot;: [],
+		&quot;priority&quot;: 1,
+		&quot;comment_count&quot;: 0,
+		&quot;creator_id&quot;: &quot;44619013&quot;,
+		&quot;created_at&quot;: &quot;2023-06-18T15:57:48.474641Z&quot;,
+		&quot;due&quot;: null,
+		&quot;url&quot;: &quot;https://todoist.com/showTask?id=6975914862&quot;,
+		&quot;duration&quot;: null
+	},
+	{
+		&quot;id&quot;: &quot;6975935318&quot;,
+		&quot;assigner_id&quot;: null,
+		&quot;assignee_id&quot;: null,
+		&quot;project_id&quot;: &quot;2314681572&quot;,
+		&quot;section_id&quot;: null,
+		&quot;parent_id&quot;: null,
+		&quot;order&quot;: 11,
+		&quot;content&quot;: &quot;Buy Milk&quot;,
+		&quot;description&quot;: &quot;&quot;,
+		&quot;is_completed&quot;: false,
+		&quot;labels&quot;: [],
+		&quot;priority&quot;: 1,
+		&quot;comment_count&quot;: 0,
+		&quot;creator_id&quot;: &quot;44619013&quot;,
+		&quot;created_at&quot;: &quot;2023-06-18T16:09:52.327647Z&quot;,
+		&quot;due&quot;: null,
+		&quot;url&quot;: &quot;https://todoist.com/showTask?id=6975935318&quot;,
+		&quot;duration&quot;: null
+	}
+]
+
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.13">
+      <div class="step-ref passed">13</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

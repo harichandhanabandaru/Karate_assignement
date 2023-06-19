@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"src\/test\/java\/examples\/Assignment\/Assignment[1:10]","start":1687103864519,"end":1687103866216,"title":"src\/test\/java\/examples\/Assignment\/Assignment[1:10] 21:27:44.519-21:27:46.216 Get projects","className":"failed"},{"id":2,"group":1,"content":"src\/test\/java\/examples\/Assignment\/Assignment[2:20]","start":1687103866228,"end":1687103867740,"title":"src\/test\/java\/examples\/Assignment\/Assignment[2:20] 21:27:46.228-21:27:47.740 Create a project"},{"id":3,"group":1,"content":"src\/test\/java\/examples\/Assignment\/Assignment[3:29]","start":1687103867749,"end":1687103868772,"title":"src\/test\/java\/examples\/Assignment\/Assignment[3:29] 21:27:47.749-21:27:48.772 Add a new task"},{"id":4,"group":1,"content":"src\/test\/java\/examples\/Assignment\/Assignment[4:63]","start":1687103868779,"end":1687103869769,"title":"src\/test\/java\/examples\/Assignment\/Assignment[4:63] 21:27:48.779-21:27:49.769 Updating a task"},{"id":5,"group":1,"content":"src\/test\/java\/examples\/Assignment\/Assignment[5:73]","start":1687103869778,"end":1687103870811,"title":"src\/test\/java\/examples\/Assignment\/Assignment[5:73] 21:27:49.778-21:27:50.811 Updating a task"},{"id":6,"group":1,"content":"src\/test\/java\/examples\/Assignment\/Assignment[6:82]","start":1687103870820,"end":1687103872983,"title":"src\/test\/java\/examples\/Assignment\/Assignment[6:82] 21:27:50.820-21:27:52.983 Delete a project","className":"failed"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>
