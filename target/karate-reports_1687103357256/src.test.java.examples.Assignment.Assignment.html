@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="res/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="res/karate-report.css" type="text/css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script type="text/javascript" src="res/jquery.min.js"></script>
+    <script type="text/javascript" src="res/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="res/bootstrap.min.js"></script>
+    <script type="text/javascript" src="res/karate-report.js"></script>
+    <script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
+  api_host:'https://app.posthog.com',
+  persistence:'localStorage',
+  autocapture:false,
+  capture_pageview:false,
+  api_transport:'sendBeacon',
+  loaded: function(posthog) { 
+    posthog.identify("5b4f0969-ecb0-4863-b6c3-04f3033633ff",{name:"haricb"});
+    posthog.capture("report_feature",{karate_version:"1.2.0",karate_meta:"intellij:1.7.4.325"});
+  }
+});
+</script>
+  
+    <title>src.test.java.examples.Assignment.Assignment</title>  
+  </head>
+  <body>   
+    <div id="root-container">
+      <div id="leftnav">
+                
+        <div>
+  <div class="nav-logo">
+    <a href="https://karatelabs.io">
+      <img src="karate-labs-logo-ring.svg" alt="Karate Labs"/>
+    </a>
+    <div class="nav-count">
+      <div id="nav-pass" class="bg-success">0</div>
+      <div id="nav-fail" class="bg-danger">1</div>
+    </div>
+  </div>
+  <div id="nav-type">
+    <div>Scenarios</div>
+  </div>         
+  <div id="nav-date">
+    <div>2023-06-18 09:18:23 PM</div>
+  </div>        
+</div>
+
+        <div class="nav-container">
+          <div class="nav-item failed">
+            <a href="#[4:61]"><span>[4:61]</span> <span>Updating a task</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div class="page-heading alert alert-primary">
+          <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
+          <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
+          <span class="feature-label">Feature:</span>
+          <span class="feature-path">src/test/java/examples/Assignment/Assignment.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">Todoist API Testing assignment</span>
+          <span class="feature-description"></span>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[4:61]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[4:61]</span>
+                <span class="scenario-name">Updating a task</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>2797</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[4:61]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[4:61]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url &#39;https://api.todoist.com/rest/v2&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.4">21:18:20.460 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[4:61]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Authorization = &#39;Bearer eda5ea58ba9befd9d42298a9fb8c405e3c2d7d8d&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[4:61]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.6">
+      <div class="step-ref bg-step">6</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def uuid = java.util.UUID.randomUUID().toString()</span>
+      </div>
+    </div>
+    <div class="time-cell passed">16</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.62">
+      <div class="step-ref passed">62</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;tasks/6975872152&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.63">
+      <div class="step-ref passed">63</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request &#39;{&quot;content&quot;: &quot;Buy Curd&quot;}&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.64">
+      <div class="step-ref passed">64</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Content-Type = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.65">
+      <div class="step-ref passed">65</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method PATCH</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2777</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.65">21:18:20.843 request:
+1 &gt; PATCH https://api.todoist.com/rest/v2/tasks/6975872152
+1 &gt; Authorization: Bearer eda5ea58ba9befd9d42298a9fb8c405e3c2d7d8d
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 23
+1 &gt; Host: api.todoist.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.19)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;content&quot;: &quot;Buy Curd&quot;}
+
+21:18:23.301 response time in milliseconds: 2447
+1 &lt; 405
+1 &lt; Content-Type: text/html; charset=utf-8
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Connection: keep-alive
+1 &lt; Date: Sun, 18 Jun 2023 15:48:23 GMT
+1 &lt; Access-Control-Allow-Credentials: false
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Cache-Control: no-cache
+1 &lt; Referrer-Policy: strict-origin-when-cross-origin
+1 &lt; Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+1 &lt; Vary: Accept-Encoding
+1 &lt; X-Cache: Error from cloudfront
+1 &lt; Via: 1.1 dfccb338f8c0489ab09835ea7dbad1a8.cloudfront.net (CloudFront)
+1 &lt; X-Amz-Cf-Pop: MAA51-P1
+1 &lt; X-Amz-Cf-Id: nfAnej2ZI4IMy5My0M81NzFDoT5nRynE-lqrmQNW05Ix4eKOZJhQTQ==
+1 &lt; Set-Cookie: csrf=2257004728ba403b8ce77792a1211b78; Max-Age=2002463303000; Expires=Tue, 31 Dec 65478 06:11:43 GMT; Domain=api.todoist.com; Secure
+&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+&lt;head&gt;
+    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;
+    &lt;title&gt;500 - Sorry, something went wrong&lt;/title&gt;
+
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+
+    
+
+    &lt;style type=&quot;text/css&quot;&gt;
+    body{
+        text-align:center;
+        font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;;
+        font-size:small;
+        color:#555;
+        line-height: 20px;
+    }
+
+    h3 {
+        font-size: 25px;
+        line-height: 30px;
+        font-weight: normal;
+    }
+
+    a {
+        color: #db4c3f;
+        text-decoration: none;
+    }
+
+    p {
+        font-size:14px;
+        margin:8px 0 0;
+    }
+
+    #container{
+        margin:53px auto;
+        max-width:400px;
+        text-align:left;
+        padding: 20px;
+        background:#fff;
+    }
+
+    .logo {
+        margin-bottom: 60px;
+        margin-top: 0;
+    }
+
+    .button {
+      border: 0;
+      border-radius: 3px;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      line-height: 1.2;
+      padding: 10px 15px;
+      color: white;
+      cursor: pointer;
+      background-color: #db4c3f;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    .buttons {
+      margin-top: 50px;
+      text-align: center;
+    }
+    &lt;/style&gt;
+
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;body&gt;
+
+
+
+
+&lt;div id=&quot;container&quot;&gt;
+    &lt;p class=&quot;logo&quot;&gt;
+        &lt;a href=&quot;https://todoist.com/&quot;&gt;
+            &lt;img src=&quot;https://d3ptyyxy2at9ui.cloudfront.net/logo-todoist-b5b89f.svg&quot; height=&quot;35&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/p&gt;
+
+        &lt;h3&gt;Sorry, something went wrong&lt;/h3&gt;
+
+        &lt;p&gt;
+            
+
+            If you reached this page from another part of &lt;a href=&quot;https://todoist.com/&quot;&gt;todoist.com&lt;/a&gt;,
+            please &lt;a href=&quot;https://get.todoist.help/&quot;&gt;let us know&lt;/a&gt; so we can correct our mistake.
+        &lt;/p&gt;
+            &lt;p&gt;Error ID: 92439b00746b405f92206dda55ef3da2&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;/body&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.66">
+      <div class="step-ref failed">66</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.66">21:18:23.306 src/test/java/examples/Assignment/Assignment.feature:66
+Then status 200
+status code was: 405, expected: 200, response time in milliseconds: 2447, url: https://api.todoist.com/rest/v2/tasks/6975872152, response: 
+&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+&lt;head&gt;
+    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;
+    &lt;title&gt;500 - Sorry, something went wrong&lt;/title&gt;
+
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+
+    
+
+    &lt;style type=&quot;text/css&quot;&gt;
+    body{
+        text-align:center;
+        font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;;
+        font-size:small;
+        color:#555;
+        line-height: 20px;
+    }
+
+    h3 {
+        font-size: 25px;
+        line-height: 30px;
+        font-weight: normal;
+    }
+
+    a {
+        color: #db4c3f;
+        text-decoration: none;
+    }
+
+    p {
+        font-size:14px;
+        margin:8px 0 0;
+    }
+
+    #container{
+        margin:53px auto;
+        max-width:400px;
+        text-align:left;
+        padding: 20px;
+        background:#fff;
+    }
+
+    .logo {
+        margin-bottom: 60px;
+        margin-top: 0;
+    }
+
+    .button {
+      border: 0;
+      border-radius: 3px;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      line-height: 1.2;
+      padding: 10px 15px;
+      color: white;
+      cursor: pointer;
+      background-color: #db4c3f;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    .buttons {
+      margin-top: 50px;
+      text-align: center;
+    }
+    &lt;/style&gt;
+
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;body&gt;
+
+
+
+
+&lt;div id=&quot;container&quot;&gt;
+    &lt;p class=&quot;logo&quot;&gt;
+        &lt;a href=&quot;https://todoist.com/&quot;&gt;
+            &lt;img src=&quot;https://d3ptyyxy2at9ui.cloudfront.net/logo-todoist-b5b89f.svg&quot; height=&quot;35&quot; /&gt;
+        &lt;/a&gt;
+    &lt;/p&gt;
+
+        &lt;h3&gt;Sorry, something went wrong&lt;/h3&gt;
+
+        &lt;p&gt;
+            
+
+            If you reached this page from another part of &lt;a href=&quot;https://todoist.com/&quot;&gt;todoist.com&lt;/a&gt;,
+            please &lt;a href=&quot;https://get.todoist.help/&quot;&gt;let us know&lt;/a&gt; so we can correct our mistake.
+        &lt;/p&gt;
+            &lt;p&gt;Error ID: 92439b00746b405f92206dda55ef3da2&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;/body&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+src/test/java/examples/Assignment/Assignment.feature:66
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.67">
+      <div class="step-ref skipped">67</div>
+      
+      <div class="step-cell skipped">
+        <span>Then</span>&nbsp;<span>response.content=&quot;Buy Curd&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.68">
+      <div class="step-ref skipped">68</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>print response</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
