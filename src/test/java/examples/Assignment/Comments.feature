@@ -8,7 +8,8 @@ Feature: Todoist API Testing assignment for comments section
 #Get all comments
   Scenario: Get all comments
     Given path 'comments'
-    And params { task_id: '6971355157' }
+    * def id = read("file:target/taskId.txt")
+    And params { task_id: '#(id)' }
     When method GET
     Then status 200
 
@@ -48,22 +49,25 @@ Feature: Todoist API Testing assignment for comments section
         }
         """
     Then match response == expectedResponse
+    * def commentId = response.id
+    And karate.write(commentId, 'commentId.txt')
     * print response
 
 
 #Get a comment
   Scenario: Get an comment
-    Given path '/comments/3298577027'
+    * def id = read("file:target/commentId.txt")
+    Given path '/comments/'+id
     When method GET
     Then status 200
     Then def expectedResponse =
           """
 {
-	"id": "3298577027",
-	"task_id": "6971355157",
+	"id": "#(id)",
+	"task_id": "#ignore",
 	"project_id": null,
 	"content": "Need one bottle of milk",
-	"posted_at": "2023-06-19T04:06:59.707365Z",
+	"posted_at": "#ignore",
 	"attachment": {
 		"file_name": "File.pdf",
 		"file_type": "application/pdf",
@@ -77,7 +81,8 @@ Feature: Todoist API Testing assignment for comments section
 
 #Update a comment
   Scenario: Update a task
-    Given path '/comments/3298577027'
+    * def id = read("file:target/commentId.txt")
+    Given path '/comments/'+id
     And  request '{"content": "Need two bottles of milk"}'
     And header Content-Type = 'application/json'
     When method POST
@@ -87,7 +92,8 @@ Feature: Todoist API Testing assignment for comments section
 
 # Delete a comment
   Scenario: Delete a comment
-    Given path '/comments/3298577141'
+    * def id = read("file:target/commentId.txt")
+    Given path '/comments/'+id
     When method DELETE
     Then status 204
 

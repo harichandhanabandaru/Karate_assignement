@@ -34,20 +34,23 @@ Feature: Todoist API Testing assignment for labels section
           }
         """
     Then match response == expectedResponse
+    * def labelId = response.id
+    And karate.write(labelId, 'labelId.txt')
     * print response
 
 
 #Get a label
   Scenario: Get a label
-    Given path '/labels/2167266423'
+    * def id = read("file:target/labelId.txt")
+    Given path '/labels/'+id
     When method GET
     Then status 200
     Then def expectedResponse =
           """
       {
-              "id": "2167266423",
-              "name": "read",
-              "order": 1,
+              "id": "#(id)",
+              "name": "Food2",
+              "order": "#ignore",
               "color": "charcoal",
               "is_favorite": false
           }
@@ -57,17 +60,17 @@ Feature: Todoist API Testing assignment for labels section
 
 #Update a label
   Scenario: Update a label
-    Given path '/labels/2167300758'
+    * def id = read("file:target/labelId.txt")
+    Given path '/labels/'+id
     And  request '{"name": "Food"}'
     And header Content-Type = 'application/json'
     When method POST
     Then status 200
 
-
-
 # Delete a label
   Scenario: Delete a label
-    Given path '/labels/2167300777'
+    * def id = read("file:target/labelId.txt")
+    Given path '/labels/'+id
     When method DELETE
     Then status 204
 

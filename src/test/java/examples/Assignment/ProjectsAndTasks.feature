@@ -4,16 +4,7 @@ Feature: Todoist API Testing assignment for projects section
     * url 'https://api.todoist.com/rest/v2'
     * header Authorization = 'Bearer eda5ea58ba9befd9d42298a9fb8c405e3c2d7d8d'
 
-
-#Get a user's projects
-  Scenario: Get projects
-    Given path 'projects'
-    When method GET
-    Then status 200
-    Then match karate.typeOf(response) == 'list'
-    And print response
-
-#Adding a new project
+# Adding a new project
   Scenario: Create a project
     Given path 'projects'
     And request { name: 'Shopping List' }
@@ -21,16 +12,27 @@ Feature: Todoist API Testing assignment for projects section
     When method POST
     Then status 200
     And print response
+    * def projectId = response.id
+    And karate.write(projectId,'projectId.txt')
 
-#    Adding a new task
+# Get a user's projects
+  Scenario: Get projects
+    * def id = read("file:target/projectId.txt")
+    Given path 'projects/'+id
+    When method GET
+    Then status 200
+    And print response
+
+
+#    Add a new task
   Scenario: Add a new task
     Given path 'tasks'
-    And request '{"content": "Buy Milk", "project_id": 2314681572}'
+    * def id = read("file:target/projectId.txt")
+    And request { "content": "Buy Milk", "project_id": '#(id)' }
     And header Content-Type = 'application/json'
     When method POST
     Then status 200
-    Then response.content="Buy Milk"
-    And print response
+    Then response.content = "Buy Milk"
     And match response ==
     """
     {
@@ -54,11 +56,14 @@ Feature: Todoist API Testing assignment for projects section
       "duration": "#null"
     }
     """
+    * def taskId = response.id
+    And karate.write(taskId,'taskId.txt')
 
 
 #    Updating a task
   Scenario: Updating a task
-    Given path 'tasks/6975872152'
+    * def id = read("file:target/taskId.txt")
+    Given path 'tasks/'+id
     And request '{"content": "Buy Curd"}'
     And header Content-Type = 'application/json'
     When method POST
@@ -67,20 +72,24 @@ Feature: Todoist API Testing assignment for projects section
     And print response
 
 #    Completing a task
-  Scenario: Updating a task
-    Given path 'tasks/6975872152/close'
+  Scenario: Close a task
+    * def id = read("file:target/taskId.txt")
+    Given path 'tasks/'+id+'/close'
     When method POST
     Then status 204
 
 
+# Get all collaborators
+  Scenario: Get all collaborators
+    * def id = read("file:target/projectId.txt")
+    Given path '/projects/'+id+'/collaborators'
+    When method GET
+    Then status 200
+
 # Deleting a project
   Scenario: Delete a project
-    Given path 'projects/2314681382'
+    * def id = read("file:target/projectId.txt")
+    Given path 'projects/'+id
     When method DELETE
     Then status 204
 
-#Get all collaborators
-  Scenario: Get all collaborators
-    Given path '/projects/2314680684/collaborators'
-    When method GET
-    Then status 200

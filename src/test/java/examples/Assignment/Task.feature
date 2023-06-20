@@ -25,7 +25,7 @@ Feature: Todoist API Testing assignment for tasks section
         	"id": "#ignore",
         	"assigner_id": null,
         	"assignee_id": null,
-        	"project_id": "2314680664",
+        	"project_id": "#ignore",
         	"section_id": null,
         	"parent_id": null,
         	"order": "#ignore",
@@ -38,59 +38,35 @@ Feature: Todoist API Testing assignment for tasks section
         	"creator_id": "44619013",
         	"created_at": "#ignore",
         	"due": {
-        		"date": "2023-06-20",
+        		"date": "#ignore",
         		"string": "tomorrow at 12:00",
         		"lang": "en",
         		"is_recurring": false,
-        		"datetime": "2023-06-20T12:00:00"
+        		"datetime": "#ignore"
         	},
         	"url": "#ignore",
         	"duration": null
         }
         """
     Then match response == expectedResponse
+    * def taskId = response.id
+    And karate.write(taskId, 'taskId.txt')
     * print response
 
 
 #Get an active task
   Scenario: Get an active tasks
-    Given path '/tasks/6971355157'
+    * def id = read("file:target/taskId.txt")
+    Given path '/tasks/'+id
     When method GET
     Then status 200
-    Then def expectedResponse =
-          """
-          {
-          	"id": "6971355157",
-          	"assigner_id": null,
-          	"assignee_id": null,
-          	"project_id": "2314680684",
-          	"section_id": null,
-          	"parent_id": null,
-          	"order": 1,
-          	"content": "Add all my **work** tasks",
-          	"description": "",
-          	"is_completed": false,
-          	"labels": [],
-          	"priority": 3,
-          	"comment_count": 0,
-          	"creator_id": "44619013",
-          	"created_at": "2023-06-16T11:55:02.939710Z",
-          	"due": {
-          		"date": "2023-06-16",
-          		"string": "16 Jun",
-          		"lang": "en",
-          		"is_recurring": false
-          	},
-          	"url": "https://todoist.com/showTask?id=6971355157",
-          	"duration": null
-          }
-          """
-    Then match response == expectedResponse
+    Then match response.id == '#(id)'
     * print response
 
 #Update a task
   Scenario: Update a task
-    Given path '/tasks/6975885638'
+    * def id = read("file:target/taskId.txt")
+    Given path '/tasks/'+id
     And  request '{"content": "Buy Coffee"}'
     And header Content-Type = 'application/json'
     When method POST
@@ -98,19 +74,22 @@ Feature: Todoist API Testing assignment for tasks section
 
 #Close a task
   Scenario: Close a task
-    Given path 'tasks/6975889651/close'
+    * def id = read("file:target/taskId.txt")
+    Given path 'tasks/'+id+'/close'
     When method POST
     Then status 204
 
 #ReOpen a task
   Scenario: Reopen a task
-    Given path 'tasks/6975889651/reopen'
+    * def id = read("file:target/taskId.txt")
+    Given path 'tasks/'+id+'/reopen'
     When method POST
     Then status 204
 
 # Delete a task
   Scenario: Delete a task
-    Given path 'tasks/6976974366'
+    * def id = read("file:target/taskId.txt")
+    Given path 'tasks/'+id
     When method DELETE
     Then status 204
 

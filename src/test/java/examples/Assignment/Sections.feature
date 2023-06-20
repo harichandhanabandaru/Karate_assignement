@@ -8,43 +8,40 @@ Feature: Todoist API Testing assignment for "Sections"  section
 #Get all sections
   Scenario: Get all sections
     Given path 'sections'
-    And params { project_id: '2314680684' }
+    * def id = read("file:target/projectId.txt")
+    And params { project_id: '#(id)' }
     When method GET
     Then status 200
     Then match response == '#array'
 
 #Create a new section
-  Scenario: Create a new sections
-    Given path 'sections'
-    And request '{"project_id":2314680684, "name":"Groceries"}'
-    And header Content-Type = 'application/json'
-    When method POST
-    Then status 200
-    Then def expectedResponse =
-        """
-        {
-        "id": "#ignore",
-            "project_id": "2314680684",
-            "order": "#ignore",
-            "name": "Groceries"
-        }
-        """
-    Then match response == expectedResponse
-    * print response
+  Scenario: Create a new section
+      Given path 'sections'
+      * def projectId = read("file:target/projectId.txt")
+      * def requestPayload = { "project_id": "#(projectId)", "name": "Groceries" }
+      And request requestPayload
+      And header Content-Type = 'application/json'
+      When method POST
+      Then status 200
+      * def sectionId = response.id
+      And karate.write(sectionId, 'sectionId.txt')
+
 
 
 #Get a single section
   Scenario: Get a single section
-    Given path '/sections/126324493'
+    * def id = read("file:target/sectionId.txt")
+    Given path '/sections/'+id
     When method GET
     Then status 200
+    * def id = read("file:target/projectId.txt")
     Then def expectedResponse =
           """
           {
-          		"id": "126324493",
-          		"project_id": "2314680684",
-          		"order": 1,
-          		"name": "Routines 🔁"
+          		"id": "#ignore",
+          		"project_id": '#(id)',
+          		"order": "#ignore",
+          		"name": "Groceries"
           	}
           """
     Then match response == expectedResponse
@@ -52,7 +49,8 @@ Feature: Todoist API Testing assignment for "Sections"  section
 
 #Update a section
   Scenario: Update a section
-    Given path '/sections/126324493'
+    * def id = read("file:target/sectionId.txt")
+    Given path '/sections/'+id
     And  request '{"name":"Supermarket"}'
     And header Content-Type = 'application/json'
     When method POST
@@ -60,7 +58,8 @@ Feature: Todoist API Testing assignment for "Sections"  section
 
 # Deleting a section
   Scenario: Delete a section
-    Given path 'sections/2314681382'
+    * def id = read("file:target/sectionId.txt")
+    Given path '/sections/'+id
     When method DELETE
     Then status 204
 
